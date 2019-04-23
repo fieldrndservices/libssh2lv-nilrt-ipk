@@ -70,4 +70,4 @@ Ensure that a cRIO has been [suitably configured as a build environment](https:/
 
 ## License
 
-The `libssh2lv-nilrt-ipk` project is licensed under the [BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause). See the [LICENSE](https://github.com/fieldrndservices/libssh2lv-nilrt-ipk/blob/master/LICENSE) file for more information about licensing and copyright.
+The `libssh2lv-nilrt-ipk` project is licensed under the [BSD-3-Clause license](https://opensource.org/licenses/BSD-3-Clause). See the [LICENSE](https://github.com/fieldrndservices/libssh2lv-nilrt-ipk/blob/master/LICENSE) file for more information about licensing and copyright. Note, this license only overs files specific to this project and _not_ the [lv-libssh2-c](https://github.com/fieldrndservices/lv-libssh2-c) project and related files. Please see the documentation for the lv-libssh2-c project for specifics on licensing and copyright of the lv-libssh2-c source code.
