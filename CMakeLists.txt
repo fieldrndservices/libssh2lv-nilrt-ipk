@@ -11,7 +11,7 @@ include(GNUInstallDirs)
 set(LIBSSH2LV "libssh2lv")
 set(LIBSSH2LV_VERSION "0.1.0")
 ExternalProject_Add(${LIBSSH2LV}
-  URL file:///${CMAKE_CURRENT_SOURCE_DIR}/${LIBSSH2LV}-${LIBSSH2LV_VERSION}.tar.gz
+  URL file:///${CMAKE_CURRENT_SOURCE_DIR}/lv-libssh2-c-${LIBSSH2LV_VERSION}.tar.gz
   CMAKE_ARGS -DBUILD_DEPS=OFF
   BUILD_IN_SOURCE NO
 )
