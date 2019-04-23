@@ -1,4 +1,4 @@
-# libssh2lv-nilrt-ipk: A CMake Superbuild for a lv-libssh2-c IPK Package
+# libssh2lv-nilrt-ipk: A CMake Superbuild for the lv-libssh2-c IPK package
 
 The libssh2lv-nilrt-ipk project is a [Cmake](https://cmake.org/) [superbuild](https://blog.kitware.com/cmake-superbuilds-git-submodules/) to build a [opkg package (.ipk)](https://openwrt.org/docs/guide-user/additional-software/opkg) of the [lv-libssh2-c](https://github.com/fieldrndservices/lv-libssh2-c) library for the [NI Linux RT](http://www.ni.com/en-us/innovations/white-papers/13/introduction-to-ni-linux-real-time.html) operating system that is used for [National Instruments (NI)](https://www.ni.com) embedded hardware, such as a [CompactRIO (cRIO)](http://www.ni.com/en-us/shop/compactrio.html).
 
