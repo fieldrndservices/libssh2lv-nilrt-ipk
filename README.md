@@ -34,10 +34,10 @@ Ensure that a cRIO has been [suitably configured as a build environment](https:/
 4. Transfer the compressed tar file to the `/tmp` folder on the cRIO.
 
    ```
-   scp libssh2lv-nilrt-ipk.tar.gz admin@XXX.XXX.XXX.XXX:/tmp/
+   scp libssh2lv-nilrt-ipk-X.X.tar.gz admin@YYY.YYY.YYY.YYY:/tmp/
    ``` 
    
-   where `XXX.XXX.XXX.XXX` is the IP address, or host name, of the cRIO. Note, the contents of the `/tmp` folder are deleted after each reboot/power cycle of the cRIO.
+   where `X.X` is the version of the release for the IPK and `YYY.YYY.YYY.YYY` is the IP address, or host name, of the cRIO. Note, the contents of the `/tmp` folder are deleted after each reboot/power cycle of the cRIO.
 5. Log into the cRIO via SSH.
 6. Navigate to the `/tmp` folder on the cRIO.
 
@@ -48,14 +48,18 @@ Ensure that a cRIO has been [suitably configured as a build environment](https:/
 7. Extract the compressed tar file.
 
    ```
-   tar -xzf libssh2lv-nilrt-ipk.tar.gz
+   tar -xzf libssh2lv-nilrt-ipk-X.X.tar.gz
    ```
-   
-8. Navigate into the `libssh2lv-nilrt-ipk` folder.
+  
+   where `X.X` is the version of the released IPK. 
+  
+8. Navigate into the `libssh2lv-nilrt-ipk-X.X` folder.
 
    ```
-   cd libssh2lv-nilrt-ipk
+   cd libssh2lv-nilrt-ipk-X.X
    ```
+   
+   where `X.X` is the version of the released IPK.
    
 9. Execute the following commands to build the IPK file:
 
