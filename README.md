@@ -2,9 +2,12 @@
 
 The libssh2lv-nilrt-ipk project is a [Cmake](https://cmake.org/) [superbuild](https://blog.kitware.com/cmake-superbuilds-git-submodules/) to build a [opkg package (.ipk)](https://openwrt.org/docs/guide-user/additional-software/opkg) of the [libssh2lv](https://github.com/fieldrndservices/libssh2lv) library for the [NI Linux RT](http://www.ni.com/en-us/innovations/white-papers/13/introduction-to-ni-linux-real-time.html) operating system that is used for [National Instruments (NI)](https://www.ni.com) embedded hardware, such as a [CompactRIO (cRIO)](http://www.ni.com/en-us/shop/compactrio.html).
 
-NI provides a package manager (opkg) and a repository (feed) to optionally install and extend the capabilities of their embedded hardware running the NI Linux RT operating system. There are many packages available from NI's official repository, but libssh2lv is not available in the repository. The libssh2lv library is used for client-side SSH and SFTP communication within [LabVIEW](https://www.ni.com/labview). It does _not_ implement a SSH server. It is specifically targeted at enabling clients to communicate with a SSH/SFTP server. This project is intended to provide a libssh2lv package that can be installed on the embedded hardware from NI using opkg package manager.
+## Table of Contents
 
-This project is structured as a CMake superbuild. There is no source code folder. The "source code" for this project is all related to building the libssh2lv source code provided as a compressed tar file and packaging it into a IPK file using CMake. The source code for the libssh2lv library is included in this project as a compressed tar file instead of using CMake's [ExternalProject_Add](https://cmake.org/cmake/help/latest/module/ExternalProject.html) download or version control features because the build procedure must be run on a properly configured cRIO that typically does not have access to the Internet. Providing the libssh2lv source code via an archive (*.tar.gz) makes it easier to simply download the source contents of a release for this project and transfer to the cRIO in an offline fashion.
+* [Quick Start](#quick-start)
+* [Background](#background)
+* [Build](#build)
+* [License](#license)
 
 ## Quick Start
 
@@ -24,6 +27,12 @@ These steps assume the [libssh2](https://www.libssh2.org) [package/library](http
 
    The libssh2lv library will now be available to the cRIO.
    
+## Background
+
+NI provides a package manager (opkg) and a repository (feed) to optionally install and extend the capabilities of their embedded hardware running the NI Linux RT operating system. There are many packages available from NI's official repository, but libssh2lv is not available in the repository. The libssh2lv library is used for client-side SSH and SFTP communication within [LabVIEW](https://www.ni.com/labview). It does _not_ implement a SSH server. It is specifically targeted at enabling clients to communicate with a SSH/SFTP server. This project is intended to provide a libssh2lv package that can be installed on the embedded hardware from NI using opkg package manager.
+
+This project is structured as a CMake superbuild. There is no source code folder. The "source code" for this project is all related to building the libssh2lv source code provided as a compressed tar file and packaging it into a IPK file using CMake. The source code for the libssh2lv library is included in this project as a compressed tar file instead of using CMake's [ExternalProject_Add](https://cmake.org/cmake/help/latest/module/ExternalProject.html) download or version control features because the build procedure must be run on a properly configured cRIO that typically does not have access to the Internet. Providing the libssh2lv source code via an archive (*.tar.gz) makes it easier to simply download the source contents of a release for this project and transfer to the cRIO in an offline fashion.
+
 ## Build
 
 Ensure that a cRIO has been [suitably configured as a build environment](https://gist.github.com/volks73/ff5bdf361c1dccd6005bfaa31ab80441) before completing the following steps to create the IPK file.
