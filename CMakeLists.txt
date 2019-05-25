@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 3.4)
-project(libssh2lv-nilrt-ipk VERSION 0.1 LANGUAGES C)
+project(libssh2lv-nilrt-ipk VERSION 0.2 LANGUAGES C)
 set(PROJECT_URL "https://github.com/fieldrndservices/libssh2lv-nilrt-ipk")
 set(PROJECT_DESCRIPTION "A CMake Super Build to create libssh2lv IPK files for the NI Linux RT operating system")
 
 # CMake extensions
 include(ExternalProject)
-include(GNUInstallDirs)
 
 # libssh2 configuration and build
 set(LIBSSH2LV "libssh2lv")
@@ -53,7 +52,7 @@ set(CPACK_DEBIAN_PACKAGE_DEPENDS "libssh2 (>= 1.8.2")
 install(FILES
   "${LIBSSH2LV_INCLUDE_DIR}/lv-libssh2.h"
   DESTINATION
-  ${CMAKE_INSTALL_INCLUDEDIR}
+  "/usr/include"
   RENAME
   "${LIBSSH2LV}.h"
 )
@@ -62,14 +61,14 @@ install(FILES
   "${LIBSSH2LV_LIBRARY_DIR}/${LIBSSH2LV}.so.1.0.0"
   PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE
   DESTINATION
-  ${CMAKE_INSTALL_LIBDIR}
-  )
+  "/usr/lib"
+)
 
 install(FILES
   "${LIBSSH2LV_LIBRARY_DIR}/${LIBSSH2LV}.so.1"
   "${LIBSSH2LV_LIBRARY_DIR}/${LIBSSH2LV}.so"
   DESTINATION
-  ${CMAKE_INSTALL_LIBDIR}
+  "/usr/lib"
 )
 
 include(CPack)
