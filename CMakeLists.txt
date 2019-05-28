@@ -8,7 +8,7 @@ include(ExternalProject)
 
 # libssh2 configuration and build
 set(LIBSSH2LV "libssh2lv")
-set(LIBSSH2LV_VERSION "0.1.1")
+set(LIBSSH2LV_VERSION "0.1.2")
 ExternalProject_Add(${LIBSSH2LV}
   PREFIX ${LIBSSH2LV}
   URL file:///${CMAKE_CURRENT_SOURCE_DIR}/${LIBSSH2LV}-${LIBSSH2LV_VERSION}.tar.gz
